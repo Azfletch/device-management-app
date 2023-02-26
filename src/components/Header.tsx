@@ -7,10 +7,10 @@ const Header = () => {
       <h1>Device Management App</h1>
       <hr />
       <div className='links'>
-        <NavLink to='/' className='link' activeClassName='active' exact='true'>
+        <NavLink to='/' className={({ isActive }) => isActive ? 'active' : 'link'}>
           Device List
         </NavLink>
-        <NavLink to='/add' className='link' activeClassName='active'>
+        <NavLink to='/add' className={({ isActive }) => isActive ? 'active' : 'link'}>
           Add Device
         </NavLink>
       </div>

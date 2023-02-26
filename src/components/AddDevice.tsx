@@ -2,7 +2,9 @@ import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import DeviceForm from './DeviceForm'
 
-const AddDevice = ({ devices, setDevices }) => {
+import { Device } from '../types'
+
+const AddDevice = ({ devices, setDevices }: { devices: Device[], setDevices: any }) => {
   const navigate = useNavigate()
   const handleOnSubmit = (device) => {
     setDevices([device, ...devices])
@@ -10,9 +12,9 @@ const AddDevice = ({ devices, setDevices }) => {
   }
 
   return (
-    <React.Fragment>
+    <>
       <DeviceForm handleOnSubmit={handleOnSubmit} />
-    </React.Fragment>
+    </>
   )
 }
 

@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import { Form, Button } from 'react-bootstrap'
 import { v4 as uuidv4 } from 'uuid'
 
+import { Device } from '../types'
+
 const DeviceForm = (props) => {
   const [errorMsg, setErrorMsg] = useState('')
   const [device, setDevice] = useState({
@@ -30,7 +32,7 @@ const DeviceForm = (props) => {
 		note,
 		eui,
 		serial_number
-	} = device
+	} = device as Device
 
   const handleOnSubmit = (event) => {
 		event.preventDefault()
@@ -49,7 +51,7 @@ const DeviceForm = (props) => {
 		]
 		let errorMsg = ''
 
-		const allFieldsFilled = values.every((field) => {
+		const allFieldsFilled: boolean = values.every((field) => {
 			const value = `${field}`.trim()
 			return value !== ''
 		})

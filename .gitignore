@@ -5,11 +5,17 @@
 /.pnp
 .pnp.js
 
+# Ignore local Yarn caches
+.yarn
+
 # testing
 /coverage
 
 # production
 /build
+
+# Typescript
+dist/
 
 # misc
 .DS_Store
