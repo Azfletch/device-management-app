@@ -1,0 +1,21 @@
+{
+  "include": [
+    "src/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ],
+  "compilerOptions": {
+    "lib": [
+      "es6"
+    ],
+    "composite": true,
+    "module": "commonjs",
+    "noImplicitAny": false,
+    "rootDir": "src",
+    "resolveJsonModule": true,
+    "outDir": "dist",
+    "esModuleInterop": true,
+    "strict": true
+  }
+}

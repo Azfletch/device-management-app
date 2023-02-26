@@ -1,0 +1,9 @@
+{
+  "name": "@device-management/shared",
+  "version": "0.1.0",
+  "main": "dist/src/index.js",
+  "private": true,
+  "devDependencies": {
+    "typescript": "^4.9.5"
+  }
+}

@@ -1,8 +1,8 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
-import DeviceForm from './DeviceForm'
+import { Device } from '@device-management/shared'
 
-import { Device } from '../types'
+import DeviceForm from './DeviceForm'
 
 const AddDevice = ({ devices, setDevices }: { devices: Device[], setDevices: any }) => {
   const navigate = useNavigate()

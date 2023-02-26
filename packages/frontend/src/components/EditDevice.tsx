@@ -1,8 +1,10 @@
 import React from 'react'
-import DeviceForm from './DeviceForm'
 import { useNavigate, useParams } from 'react-router-dom'
+import { Device } from '@device-management/shared'
 
-const EditDevice = ({ devices, setDevices }) => {
+import DeviceForm from './DeviceForm'
+
+const EditDevice = ({ devices, setDevices }: { devices: Device[], setDevices: any }) => {
   const navigate = useNavigate()
   const { id } = useParams()
 
